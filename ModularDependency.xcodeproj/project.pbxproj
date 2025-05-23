@@ -6,15 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E31F36A12DDF298800CF4818 /* CommonModule in Frameworks */ = {isa = PBXBuildFile; productRef = E31F36A02DDF298800CF4818 /* CommonModule */; };
+		E31F36A32DDF298E00CF4818 /* HomeModule in Frameworks */ = {isa = PBXBuildFile; productRef = E31F36A22DDF298E00CF4818 /* HomeModule */; };
+		E31F36A72DDF299900CF4818 /* LoginModule in Frameworks */ = {isa = PBXBuildFile; productRef = E31F36A62DDF299900CF4818 /* LoginModule */; };
+		E31F36B12DDF3EFF00CF4818 /* UtilityModule in Resources */ = {isa = PBXBuildFile; fileRef = E31F36B02DDF3EF100CF4818 /* UtilityModule */; };
+		E37A56482DDF184B00E325C9 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E37A56472DDF184B00E325C9 /* Swinject */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		E31F369A2DDF1E8B00CF4818 /* LoginModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = LoginModule; sourceTree = "<group>"; };
+		E31F36B02DDF3EF100CF4818 /* UtilityModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UtilityModule; sourceTree = "<group>"; };
 		E37A562D2DDF178F00E325C9 /* ModularDependency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModularDependency.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E37A564D2DDF1D8000E325C9 /* CommonModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CommonModule; sourceTree = "<group>"; };
+		E37A564E2DDF1DD500E325C9 /* HomeModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HomeModule; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E37A563F2DDF179000E325C9 /* Exceptions for "ModularDependency" folder in "ModularDependency" target */ = {
+		E31F36AC2DDF3A8400CF4818 /* Exceptions for "ModularDependency" folder in "ModularDependency" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = E37A562C2DDF178F00E325C9 /* ModularDependency */;
 		};
@@ -24,7 +36,7 @@
 		E37A562F2DDF178F00E325C9 /* ModularDependency */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				E37A563F2DDF179000E325C9 /* Exceptions for "ModularDependency" folder in "ModularDependency" target */,
+				E31F36AC2DDF3A8400CF4818 /* Exceptions for "ModularDependency" folder in "ModularDependency" target */,
 			);
 			path = ModularDependency;
 			sourceTree = "<group>";
@@ -36,16 +48,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31F36A72DDF299900CF4818 /* LoginModule in Frameworks */,
+				E31F36A12DDF298800CF4818 /* CommonModule in Frameworks */,
+				E31F36A32DDF298E00CF4818 /* HomeModule in Frameworks */,
+				E37A56482DDF184B00E325C9 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E31F369B2DDF209200CF4818 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E31F36B02DDF3EF100CF4818 /* UtilityModule */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E31F369F2DDF298800CF4818 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E37A56242DDF178F00E325C9 = {
 			isa = PBXGroup;
 			children = (
+				E31F369B2DDF209200CF4818 /* Shared */,
+				E37A56452DDF17A700E325C9 /* Modules */,
 				E37A562F2DDF178F00E325C9 /* ModularDependency */,
+				E31F369F2DDF298800CF4818 /* Frameworks */,
 				E37A562E2DDF178F00E325C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +90,16 @@
 				E37A562D2DDF178F00E325C9 /* ModularDependency.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E37A56452DDF17A700E325C9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E37A564D2DDF1D8000E325C9 /* CommonModule */,
+				E31F369A2DDF1E8B00CF4818 /* LoginModule */,
+				E37A564E2DDF1DD500E325C9 /* HomeModule */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +122,10 @@
 			);
 			name = ModularDependency;
 			packageProductDependencies = (
+				E37A56472DDF184B00E325C9 /* Swinject */,
+				E31F36A02DDF298800CF4818 /* CommonModule */,
+				E31F36A22DDF298E00CF4818 /* HomeModule */,
+				E31F36A62DDF299900CF4818 /* LoginModule */,
 			);
 			productName = ModularDependency;
 			productReference = E37A562D2DDF178F00E325C9 /* ModularDependency.app */;
@@ -107,6 +155,9 @@
 			);
 			mainGroup = E37A56242DDF178F00E325C9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E37A56462DDF184B00E325C9 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E37A562E2DDF178F00E325C9 /* Products */;
 			projectDirPath = "";
@@ -122,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31F36B12DDF3EFF00CF4818 /* UtilityModule in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,12 +199,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 676C9D7B87;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ModularDependency/Info.plist;
+				INFOPLIST_FILE = ModularDependency/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -175,12 +228,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 676C9D7B87;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ModularDependency/Info.plist;
+				INFOPLIST_FILE = ModularDependency/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -247,6 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -305,6 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -337,6 +393,37 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E37A56462DDF184B00E325C9 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E31F36A02DDF298800CF4818 /* CommonModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonModule;
+		};
+		E31F36A22DDF298E00CF4818 /* HomeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeModule;
+		};
+		E31F36A62DDF299900CF4818 /* LoginModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LoginModule;
+		};
+		E37A56472DDF184B00E325C9 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E37A56462DDF184B00E325C9 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E37A56252DDF178F00E325C9 /* Project object */;
 }
